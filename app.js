@@ -3,7 +3,7 @@ const mongooose = require('mongoose');
 
 const app = express();
 
-mongooose.connect('mongodb://localhost:27017/ToDoList', { useNewUrlParser: true, useUnifiedTopology: true });
+mongooose.connect('mongodb://Kraken6:TestPass@cluster0-shard-00-00.fbfw5.mongodb.net:27017,cluster0-shard-00-01.fbfw5.mongodb.net:27017,cluster0-shard-00-02.fbfw5.mongodb.net:27017/ToDoList?ssl=true&replicaSet=atlas-gl97fp-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static("public"));
